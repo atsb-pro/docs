@@ -1,4 +1,9 @@
-# Markdown Extension Examples
+# Project description
+
+
+In this project we are trying to create a bot that will analyze the stock price movement and based on that the bot will tell us whether we need to buy or sell
+
+---
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 

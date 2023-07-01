@@ -5,21 +5,21 @@ layout: home
 hero:
   name: "ATSB documentation"
   text: "ATSB docs"
-  tagline: My great project tagline
+  tagline: Our great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: About the project
+      link: /about-project
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Technical details
+      link: /tech-desc
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Fintech app
+    details: Uses modern technologies
+  - title: AI powered
+    details: Some text
+  # - title: Feature C
+  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
