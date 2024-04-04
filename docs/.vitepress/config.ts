@@ -39,6 +39,7 @@ export default defineConfig({
       },
     }
   },
+  base: "/docs/",
   lang: "en",
   title: "ATSB",
   description: "ATSB project documentation",
