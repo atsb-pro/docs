@@ -1,51 +1,33 @@
-name: deploy-docs
-on: [push]
-
+name: Build and Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    # branches: [ "main", "development" ]
+permissions:
+  contents: write
+  # pages: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      SOURCE: "docs/.vitepress/dist/"
-      REMOTE_HOST: atsb.pro
-      REMOTE_USER: ubuntu
-      TARGET: "/var/www/atsb.pro"
-      EXCLUDE: ""
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
         id: pnpm-install
         with:
           version: 8.5.0
           run_install: false
 
-      - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
+
       - run: pnpm build
 
-      # - run: yarn install
-      # - run: yarn build
-      - run: ls -la docs/.vitepress/dist
-      - name: Clean up the server dir
-        uses: appleboy/ssh-action@master
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          host: atsb.pro
-          username: ubuntu
-          key: ${{ env.SSH_PRIVATE_KEY }}
-          script: rm -rf /var/www/atsb.pro
-
-      - name: Deploy files
-        uses: easingthemes/ssh-deploy@main
-        with:
-          SSH_PRIVATE_KEY: ${{ env.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ env.REMOTE_HOST }}
-          REMOTE_USER: ${{ env.REMOTE_USER }}
-        env:
-          SOURCE: ${{ env.SOURCE }}
-          TARGET: ${{ env.TARGET }}
-          EXCLUDE: ".git, .github, .vscode, .gitignore"
+          folder: docs/.vitepress/dist
+          branch: gh-pages

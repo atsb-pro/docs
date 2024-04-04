@@ -15,7 +15,7 @@ hero:
       link: /en/tech-desc
   image:
     src: /images/main-logo.webp
-    alt: ATSB logo
+    alt: Vue FAQ
 
 features:
   - title: Fintech app

@@ -4,23 +4,23 @@ layout: home
 
 hero:
   name: "ATSB"
-  text: "ATSB documentation"
+  text: "ATSB תיעוד"
   tagline: Our great project tagline
   actions:
     - theme: brand
-      text: About the project
-      link: /en/about-project
+      text: על הפרוייקט
+      link: /he/about-project
     - theme: alt
-      text: Technical details
-      link: /en/tech-desc
+      text: פרטים טכניים
+      link: /he/tech-desc
   image:
     src: /images/main-logo.webp
-    alt: ATSB logo
+    alt: Vue FAQ
 
 features:
-  - title: Fintech app
-    details: Uses modern technologies
-  - title: AI powered
+  - title: אפליקציית פינטק
+    details: משתמש בטכנולוגיות חדישות
+  - title: מופעל בינה מלאכותית
     details: Some text
   # - title: Feature C
   #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit

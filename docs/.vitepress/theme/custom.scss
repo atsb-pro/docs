@@ -1,0 +1,38 @@
+body {
+    overflow-y: scroll;
+    --vp-custom-block-code-font-size: 14px;
+
+    :not(.dark) & {
+        --vp-custom-block-details-text: #54545c;
+    }
+
+    .vp-doc {
+        h1 {
+            margin-bottom: 1em;
+        }
+
+        p img {
+            margin: auto;
+        }
+    }
+
+    .is-home {
+        .main .text {
+            line-height: 44px;
+            font-size: 38px;
+        }
+
+        .has-image .main .name {
+            font-size: 68px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+
+.VPSidebarItem.level-0 h2.text {
+    font-family: Office Code Pro, Source Code Pro, Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
