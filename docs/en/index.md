@@ -3,9 +3,8 @@
 layout: home
 
 hero:
-  name: "ATSB"
-  text: "ATSB documentation"
-  tagline: Our great project tagline
+  name: "ATSB Project"
+  tagline: ATSB leverages technical analysis indicators and calculations to identify potential trading opportunities in the stock market.
   actions:
     - theme: brand
       text: About the project
@@ -15,14 +14,14 @@ hero:
       link: /en/tech-desc
   image:
     src: /images/main-logo.webp
-    alt: Vue FAQ
+    alt: ATSB logo
 
 features:
-  - title: Fintech app
-    details: Uses modern technologies
-  - title: AI powered
-    details: Some text
-  # - title: Feature C
-  #   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Comprehensive Guides
+    details: Master every aspect of the ATSB with step-by-step guides and detailed explanations.
+  - title: Multiple Language Support
+    details: Utilize the documentation in your preferred language for a seamless experience.
+  - title: Interactive Examples
+    details: Enhance your understanding with interactive code examples and tutorials.
 ---
 

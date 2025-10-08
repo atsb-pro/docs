@@ -16,5 +16,6 @@
   "devDependencies": {
     "sass": "^1.74.1",
     "vitepress": "^1.0.2"
-  }
+  },
+  "packageManager": "pnpm@9.0.0+sha1.91e316c667cd19b00fac72b674ae11b569211ff1"
 }

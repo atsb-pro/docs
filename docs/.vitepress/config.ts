@@ -10,7 +10,7 @@ export default defineConfig({
       },
     },
     he: {
-      lang: "he",
+      lang: "he", 
       label: "Hebrew",
       themeConfig: {
         nav: [
@@ -39,6 +39,7 @@ export default defineConfig({
       },
     }
   },
+  head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
   base: "/docs/",
   lang: "en",
   title: "ATSB",
@@ -51,26 +52,39 @@ export default defineConfig({
     ],
 
     sidebar: [
-      { text: "About the project", link: "/en/about-project" },
+      {
+        text: "Getting started",
+        items: [
+        { text: "About the project", link: "/en/about-project" },
+        { text: "Technical details", link: "/en/tech-desc" },
+        ]
+      },
       {
         text: "Business goals",
         items: [
           // { text: "Some article", link: "/en/about-project" },
-          { text: "Strategy discoverer", link: "/en/strategy-discoverer" },
+          { text: "Stock analysis", link: "/en/strategy-discoverer" },
         ],
       },
       {
         text: "Services",
         items: [
           { text: "Trading", link: "/en/services-trading" },
-          { text: "Historical prices", link: "/en/services-historical-prices" },
+          { text: "StochUtils", link: "/en/services-stockUtils" },
+        ],
+      },
+      {
+        text: "Databases",
+        items: [
+          { text: "Stock history", link: "/en/hystory-database.md" },
+          { text: "JSON Data Refresh", link: "/en/latest-data.md" },
         ],
       },
       {
         text: "Installation",
         items: [
           { text: "Frontend", link: "/en/installation-frontend" },
-          { text: "Backend", link: "/en/installation-frontend" },
+          { text: "Backend", link: "/en/installation-backend" },
           // { text: "Services", link: "/en/services" },
         ],
       },
